@@ -30,21 +30,21 @@ TidalCycles first.
 
 2. [Mint](https://github.com/kindohm/risc-chip/blob/master/tracks/02.Mint.tidal)
 
-3. [Lake Effect](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
+3. [Lake Effect](https://github.com/kindohm/risc-chip/blob/master/tracks/03.Lake-Effect.tidal)
 
-4. [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
+4. [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/04.RISC-Chip.tidal)
 
-5. [Bit Dust](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
+5. [Bit Dust](https://github.com/kindohm/risc-chip/blob/master/tracks/05.Bit-Dust.tidal)
 
-6. [Viewport](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
+6. Viewport
 
-7. [Practical Closures](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
+7. [Practical Closures](https://github.com/kindohm/risc-chip/blob/master/tracks/07.Practical-Closures.tidal)
 
-8. [.lean()](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
+8. [.lean()](https://github.com/kindohm/risc-chip/blob/master/tracks/08.lean.tidal)
 
-9. [Enger Tower](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal) (bonus track)
+9. [Enger Tower](https://github.com/kindohm/risc-chip/blob/master/tracks/09bonus.Enger-Tower.tidal) (bonus track)
 
-10. [Wrist Singularity](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal) (bonus track)
+10. [Wrist Singularity](https://github.com/kindohm/risc-chip/blob/master/tracks/10bonus.Wrist-Singularity.tidal) (bonus track)
 
 
 <a name="samples"></a>
@@ -52,8 +52,9 @@ TidalCycles first.
 
 Audio samples are in the [samples](tree/master/samples) folder. They are structured in a way
 that is compatible with the TidalCycles environment. **Note**: samples were used only for the
-tracks [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal) and 
-[Bit Dust](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal).
+tracks [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/04.RISC-Chip.tidal) and 
+[Bit Dust](https://github.com/kindohm/risc-chip/blob/master/tracks/05.Bit-Dust.tidal)
+(all other tracks used live synthesizers with MIDI).
 
 <a name="notes"></a>
 ## Nerdy Production Notes
