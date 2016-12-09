@@ -66,4 +66,23 @@ tracks [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/04.RI
 <a name="notes"></a>
 ## Nerdy Production Notes
 
-...
+Writing and production of _RISC Chip_ began on June 10, 2016 with the
+creation of [Pattern 454](https://github.com/kindohm/365tidalpatterns/blob/master/patterns-401-500/pattern454.tidal) 
+from the _365 Tidal Patterns_ project. Production lasted until August 30, 2016.
+
+All sounds on _RISC Chip_ were sourced from the following analog hardware[1]: 
+
+* Elektron Analog RYTM
+* Dreadbox Erebus
+* Korg Minilogue
+* Korg Volca Keys
+
+Writing and recording was primarily done from TidalCycles MIDI. Patterns
+were executed and recorded in real time with live synths. Exceptions 
+are on _RISC Chip_ and _Bit Dust_ which used extracted samples from 
+patterned synth recordings.
+
+[1] Two tracks contain content not sourced from the above hardware: 
+1) _RISC Chip_ and 2) _Viewport_ (which is a remix of the track 
+_Ring Surfing_ from the 
+[Expedition](https://kindohm.bandcamp.com/album/expedition) album).
