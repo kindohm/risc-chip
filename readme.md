@@ -1,9 +1,9 @@
 RISC Chip
 =========
 
-RISC Chip is a musical project of electronic music made by Mike Hodnick
-under the "Kindohm" artist moniker. It was made with the TidalCycles
-live-coding pattern environment (based in Haskell). 
+RISC Chip is an electronic music project by Mike Hodnick under the "Kindohm" 
+artist moniker. It was made with the TidalCycles live-coding pattern environment 
+(based in Haskell). 
 
 This repository (will) contain:
 
