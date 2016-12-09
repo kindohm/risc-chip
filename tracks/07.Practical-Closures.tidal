@@ -1,0 +1,87 @@
+bps (180/120)
+
+m silence
+
+-- 129
+m $
+stack [
+foldEvery [2,3,4] (0.75 <~) $ degradeBy 0.6 $ shift $ chooseMidi' "-13" mpent [0,12,0,12] "0*2",
+slow (3.5/3) $ chooseMidi' "-13" mpent [-12,0,12,0] "0/2"] |=| dur "0.9"
+|=| cutoff (scale 0.85 0.99 $ slow 8.5 tri1)
+
+-- kit 25
+r1 $ whenmod 22 19 (iter 8) $ whenmod 11 9 (slow (4/3)) $
+whenmod 14 13 (|=| perf1 (scale 0.2 1 $ rand)) $
+whenmod 10 7 (|=| perf2 (scale 0.2 1 $ shift' 4 $ rand)) $
+whenmod 13 10 (|=| perf3 (scale 0.2 1 $ shift' 3 $ rand)) $
+whenmod 12 9 (|=| perf4 (scale 0.2 1 $ shift' 5 $ rand)) $
+whenmod 11 8 (|=| perf5 (scale 0.2 1 $ shift' 6 $ rand)) $
+whenmod 9 7 (|=| perf6 (scale 0.2 1 $ shift' 7 $ rand)) $
+whenmod 8 6 (|=| perf7 (scale 0.2 1 $ shift' 8 $ rand)) $
+whenmod 7 5 (|=| perf8 (scale 0.2 1 $ shift' 9 $ rand)) $
+whenmod 6 4 (|=| perf11 (scale 0.2 1 $ shift' 10 $ rand)) $
+stack [
+whenmod 18 12 (const $ midinote "~") $ foldEvery [3,4] (0.25 <~) $ midinote "{~ ~ ~ [~] 0*2? 0*2? ~ [0 ~] [0 ~] [0 ~] [0 ~]}%8",
+foldEvery [3,4] (0.25 <~) $ midinote "{~ ~ ~ [~] ~ ~ ~ [~ 8] [~ 8] [~ 8] [~ 8]}%8",
+(0.25 ~>) $ midinote "9(3,8)",
+whenmod 25 20 (const $ midinote "~") $ foldEvery [3,4] (0.25 <~) $ midinote "{1 ~ ~ [~ 1] ~ ~ ~ ~ ~ ~ ~}%8",
+whenmod 30 20 (const $ midinote "~") $ midinote "{~ 3 ~ 3 ~ ~ ~}%4",
+(0.125 ~>) $ midinote "10/8" |=| dur "0.5" ]
+|=| perf1 "0.0001"
+|=| perf2 "0.0001"
+|=| perf3 "0.0001"
+|=| perf4 "0.0001"
+|=| perf5 "0.0001"
+|=| perf6 "0.0001"
+|=| perf7 "0.0001"
+|=| perf8 "0.0001"
+|=| perf11 "0.0001"
+
+erebus $ (|+| note "[0 0 0]/64") $ density 2 $ foldEvery [2,3,5] (0.25 ~>) $
+whenmod 4 2 (|+| note "12") $ every 2 (|+| note "12") $ (|+| note "-13") $ note "0 3 5 7 10 12 15 19"
+
+r1 silence
+m silence
+erebus silence
+
+
+r1 $ midinote "9" |=| perf1 "0.0001" |=| perf2 "0.0001" |=| perf3 "0.0001" |=| perf4 "0.0001" |=| dur "0.5"
+
+
+erebus $ note "0" |=| dur "0.6"
+
+
+-- for samples recording
+m $ slow 19 $ (|+| note "-13") $ (|+| note "[-12 0 12]/3") $ note "0 3 5 7 10"
+|=| cutoff (scale 0.99 0.995 $ slow 8.5 tri1)
+|=| dur "0.9"
+
+m silence
+
+
+
+
+r1 $
+(|=| perf1 (scale 0.2 1 $ rand)) $
+(|=| perf2 (scale 0.2 1 $ shift' 4 $ rand)) $
+(|=| perf3 (scale 0.2 1 $ shift' 3 $ rand)) $
+(|=| perf4 (scale 0.2 1 $ shift' 5 $ rand)) $
+ (|=| perf5 (scale 0.2 1 $ shift' 6 $ rand)) $
+ (|=| perf6 (scale 0.2 1 $ shift' 7 $ rand)) $
+ (|=| perf7 (scale 0.2 1 $ shift' 8 $ rand)) $
+ (|=| perf8 (scale 0.2 1 $ shift' 9 $ rand)) $
+ (|=| perf11 (scale 0.2 1 $ shift' 10 $ rand)) $
+stack [
+slow 2 $ midinote "0 1"]
+
+|=| perf1 "0.0001"
+|=| perf2 "0.0001"
+|=| perf3 "0.0001"
+|=| perf4 "0.0001"
+|=| perf5 "0.0001"
+|=| perf6 "0.0001"
+|=| perf7 "0.0001"
+|=| perf8 "0.0001"
+|=| perf11 "0.0001"
+
+r1 silence

@@ -1,0 +1,81 @@
+bps (200/120)
+
+let themod = (|=| shape1 (scale 0 0.95 $ slow 12.1 tri1)) . (|=| shape2 (scale 0 0.95 $ slow 15.57 tri1)) . (|=| voicedepth (scale 0 0.7 $ slow 17.31 tri1)) . (|=| xmod (scale 0 1 $ slow 20 tri1)) . (|=| release (scale 0 0.4 $ slow 22.18 tri1))
+    pmod = (|=| pitchmod (scale 0 1 $ slow 16.22 tri1))
+
+-- in 5
+-- rytm kit F3 (19)
+r1 $ stack [
+midinote "{0 ~ ~ 0 ~}%8",
+midinote "8*8",
+midinote "{[~ 3]/2 ~ ~ ~ ~}%8",
+(0.0625 <~) $ midinote "{9/9 ~ ~}%8",
+midinote "{10/8 ~ ~ ~ ~}%8",
+midinote "{~ 2/6 ~ ~ ~}%8"]
+
+r1 silence
+
+-- ML 122
+m $ pmod $ themod $ midinote "{42 ~ ~ 42 ~}%8" # dur "{0.3 ~ ~ 0.15 ~}%8"
+
+m silence
+r1 silence
+
+-- in 7
+r1 $ stack [
+midinote "{0 ~ ~ 0 ~ 0 ~}%8",
+midinote "8*8",
+midinote "{[~ 3]/2 ~ ~ ~ ~ ~ ~}%8",
+(0.0625 <~) $ midinote "{9/9 ~ ~}%8",
+midinote "{10/8 ~ ~ ~ ~ ~ ~}%8",
+midinote "{~ 2/6 ~ ~ ~ ~ ~}%8"]
+
+m $ pmod $ themod $ midinote "{42 ~ ~ 42 ~ 42 ~}%8" # dur "{0.3 ~ ~ 0.15 ~ 0.15 ~}%8"
+
+-- in 9
+r1 $ stack [
+midinote "{0 ~ ~ 0 ~ 0 ~ 0 ~}%8",
+midinote "8*8",
+midinote "{[~ 3]/2 ~ ~ ~ ~ ~ ~ ~ ~}%8",
+(0.0625 <~) $ midinote "{9/9 ~ ~}%8",
+midinote "{10/8 ~ ~ ~ ~ ~ ~ ~ ~}%8",
+midinote "{~ 2/6 ~ ~ ~ ~ ~ ~ ~}%8"]
+
+m $ pmod $ themod $ midinote "{42 ~ ~ 42 ~ 42 ~ 42 ~}%8" # dur "{0.3 ~ ~ 0.15 ~ 0.15 ~ 0.15 ~}%8"
+
+-- in 6
+r1 $ stack [
+midinote "{~ ~ ~ 0 ~ 0}%8",
+midinote "8*8",
+midinote "{~ ~ ~ 3 ~ ~}%8",
+(0.0625 <~) $ midinote "{9/9 ~ ~}%8",
+midinote "{~ ~ ~ ~ ~ 10/8}%8",
+midinote "{~ 2/6 ~ ~ ~ ~}%8"]
+
+m $ pmod $ themod $ midinote "{~ ~ ~ 42 ~ 42}%8" # dur "{~ ~ ~ 0.15 ~ 0.45}%8"
+
+r1 silence
+m silence
+
+
+r1 $ slow 1.7 $ midinote "2/2"
+
+
+-- adapted for keys. should really be in the "live" project
+keys $ (|+| note "0") $ (|+| note "-18") $  note "{0 ~ ~ 0 ~}%8"
+# dur "{0.3 ~ ~ 0.15 ~}%8"
+|=| detune (scale 0 0.5 $ slow 12 tri1)
+|=| kdecay (scale 0.4 1 $ slow 15 tri1)
+|=| vcoegint (scale 0 1 $ slow 11 tri1)
+|=| voice "[0.2]/30"
+|=| klforate "0.001"
+|=| klfopitchint "0.001"
+
+|=| kportamento "0"
+
+keys silence
+
+
+{-|
+this is a comment
+}

@@ -1,0 +1,131 @@
+bps (150/120)
+
+let prog = (|+| note "{0 0 0 2 2}%1")
+    timemod p = whenmod 28 18 (foldEvery [2,3,4] (0.25 <~)) $ p
+
+-- 26
+r1 $ prog $ rep' 24 $ midinote "{36/4 ~ ~ ~ ~}%4"
+
+r1 $ timemod $
+stack [prog $ rep' 24 $ midinote "{36/4 ~ ~ ~ ~}%4",
+whenmod 30 22 (const $ midinote "~") $ whenmod 16 8 (0.125 ~>) $ midinote "3*4",
+whenmod 18 14 (const $ midinote "~") $ whenmod 9 6 (0.0625 <~) $ midinote "~ 1",
+whenmod 22 16 (const $ midinote "~") $ whenmod 14 9 (slow (4/3)) $ midinote "{8*6 8*4 8*4 [8 9]/2 8*4}%4",
+midinote "{10/8 ~ ~ ~ ~}%4" ]
+
+-- m 130
+m $ timemod $prog $
+rarely (stut' 2 (0.0625) (|+| note "12")) $
+(0.125 ~>) $ rep' 23 $ (|+| note (choose [0,12,24])) $ (|+| note "-7") $ note "{0/4 ~ ~ ~ ~}%4"
+|=| release (scale 0.15 0.4 $ shift' 4 $ rand)
+|=| egrelease (scale 0.15 0.4 $ shift' 3 $ rand)
+|=| decay (scale 0.1 0.2 $ shift' 5 $ rand)
+|=| egdecay (scale 0.1 0.15 $ shift' 13 $ rand)
+|=| oct1 (scale 0.001 0.3 $ shift' 6 $ rand)
+|=| oct2 (scale 0.5 0.75 $ shift' 7 $ rand)
+|=| wave1 (scale 0 1 $ shift' 8 $ rand)
+|=| wave2 (scale 0 0.66 $ shift' 9 $ rand)
+|=| shape1 (scale 0.001 0.5 $ shift' 11 rand)
+|=| shape2 (scale 0.001 0.5 $ shift' 12 rand)
+|=| dur (scale 0.1 0.2 $ shift' 16 rand)
+
+m silence
+
+-- v2 ?
+erebus $ prog $ sometimes (stut' 1 (0.0625*2) (|+| note "0")) $ shift $
+(|+| note (choose [0,-12,12])) $ (|+| note "-7") $ note "{0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ ~}%16"
+|=| modwheel (rand)
+
+erebus $ timemod $ prog  $ sometimes (stut' 1 (0.0625*2) (|+| note "0")) $ shift $
+(|+| note (choose [0,-12,12])) $ (|+| note "-7") $ note "{0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ ~}%16"
+|=| modwheel (rand)
+
+erebus $ prog  $
+(|+| note (choose [0,-12,12,24])) $ (|+| note "-7") $ note "{0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ ~}%16"
+|=| modwheel (rand)
+
+erebus $ timemod $ prog  $
+(|+| note (choose [0,-12,12,24])) $ (|+| note "-7") $ note "{0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ ~}%16"
+|=| modwheel (rand)
+
+
+erebus $ note "0*2"
+
+erebus silence
+r1 silence
+m silence
+
+keys silence
+
+
+erebus $ prog $ sometimes (stut' 1 (0.0625*2) (|+| note "0")) $ shift $
+(|+| note (choose [0,-12,12])) $ (|+| note "-7") $ note "{0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ 0 ~ ~ ~}%16"
+|=| modwheel (rand)
+
+keys $ prog $
+rarely (stut' 2 (0.0625) (|+| note "12")) $
+(0.125 ~>) $ rep' 23 $ (|+| note (choose [0,12,24])) $ (|+| note "-7") $ note "{0/4 ~ ~ ~ ~}%4"
+
+|=| detune "0"
+|=| voice "0.5"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let progwav = (|+| up "{0 0 0 2 2}%1")
+
+c1 $
+whenmod 13 11 (iter 8) $
+foldEvery [3,4] (0.25 <~) $
+whenmod 11 9 (|=| crush (scale (-5) 5 $ slow 4.66 tri1)) $
+every 6 (|=| coarse "16 32 24") $
+every 7 (|=| accelerate "-1 1") $
+every 8 (rip 0.25 0.125) $
+every 9 (rip' 0 1 8 0.125 0.25) $
+stack [sometimes (stut' 1 (0.125) (|+| speed "0")) $ progwav $
+  s "{009b ~ ~ 009b ~ ~ 009b ~ ~ 009b ~ ~ 009b ~ ~ 009b ~ ~ ~}%16"
+  # n (shift $ irand 13) |=| cut "1" |=| gain "0.9",
+  progwav $ rep' 24 $ sound "{9k/4 ~ ~ ~ ~}%4" |=| cut "2",
+  whenmod 7 4 (0.125 ~>) $ sound "9cp*4",
+  sound (samples "amenall2*8" (irand 30)) |=| unit "c" |=| speed "8" |=| gain "1.2",
+  sound "~ 9s",
+  sound "{9ch*4 9ch*2 9ch*2 ~ 9ch*4 9ch*8 9ch*4}%4",
+  sound "{9cy/4 ~ ~ ~ ~}%4",
+  sometimes (stut' 2 (0.125) (|*| speed "2")) $ progwav $ (0.125 ~>) $ rep' 23 $ sound (samples "{009m/4 ~ ~ ~ ~}%4" (irand 27)) |=| gain "1.2" |=| cut "81"]
+  |=| delaytime "0" |=| delayfeedback "0"
+
+
+
+
+
+
+hush
+
+keys $ prog $
+rarely (stut' 2 (0.0625) (|+| note "12")) $
+(0.125 ~>) $ rep' 23 $ (|+| note (choose [0,12,24])) $ (|+| note "-7") $ note "{[0/4, 7/4] ~ ~ ~ ~}%4"
+
+keys silence

@@ -1,0 +1,18 @@
+bps (170/120)
+
+
+let pat = "{0*4 ~ [0*2 ~] [~ 0*2] ~ 0*4 ~ [~ 0] ~}%2"
+    reset p = (|=| voicedepth "0.0001") $ (|=| xmod "0.0001") $ (|=| release "0.0001") $ (|=| pitch2 "0.50001") $ p
+    mod1 p = (|=| voicedepth (scale 0 1 $ slow 17 tri1)) $  (|=| xmod (scale 0 1 $ slow 14 tri1)) $ (|=| release (scale 0 0.5 $ slow 12 tri1)) $  (|=| pitch2 (scale 0.45 0.55 $ slow 13 tri1)) p
+
+r1 $ stack [midinote pat, midinote "~ 3/4", midinote "{10/8 ~ ~ ~ ~ ~ ~ ~ ~}%2" ]
+
+-- ML 123
+m $ reset $ whenmod 12 8 (stut' 5 (0.0625) (|+| note "{5 -5 5 -5}%36")) $ (0.0625 ~>) $ (|+| note "[12 0]/16") $ (|+| note "-17") $
+note pat |=| dur "0.07"
+
+m $ mod1 $ reset $ whenmod 12 8 (stut' 5 (0.0625) (|+| note "{5 -5 5 -5}%36")) $ (0.0625 ~>) $ (|+| note "[12 0]/16") $ (|+| note "-17") $
+note pat |=| dur "0.07"
+
+m silence
+r1 silence

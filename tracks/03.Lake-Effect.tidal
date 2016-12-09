@@ -1,0 +1,71 @@
+bps (150/120)
+
+erebus silence
+
+erebus $ (|+| note (choose[0,-12])) $ slow 2 $ note "[-6/2] ~ ~ ~" |=| dur "1"
+|=| modwheel (shift' 188 $ rand)
+
+let fill = midinote "9*6 9*6 [8,3] [0,4,10]" |=| velocity "[0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.49] 0.501"
+    nope = midinote "~"
+    hatpat = whenmod 12 9 (const $ midinote "[8*3 8*3 9 ~]") $ whenmod 10 6 (const $ midinote "[8*3 9]*2") $ midinote "[8*4 9]*2"
+    snarepat = midinote "~ 1"
+    kickpat = midinote "~ [~ 0*2] ~ ~"
+    tompat = midinote "{[5 ~ ~ 7] [[~ 5] ~] ~ [~ 12] ~}%4"
+    gtfo p = (const $ midinote "~") $ p
+
+-- ML 125
+m $ whenmod 14 10 (|+| note "12") $ whenmod 8 4 (|+| note "12") $ (|+| note "-6") $
+note "{0 7 -1/4 3 -12/3 11 -5/2}%2" |=| dur "0.1"
+|=| voicedepth (scale 0 0.75 $ slow 20 tri1)
+|=| xmod (scale 0 0.75 $ slow 14.5 tri1)
+|=| pitch2 (scale 0.45 0.55 $ slow 13.1 tri1)
+|=| oct1 (scale 0 0.5 $ slow 11.75 tri1)
+|=| oct2 (scale 0.5 1 $ slow 18.25 tri1)
+|=| cutoff (scale 0.2 0.45 $ slow 17 tri1)
+|=| pitchmod (scale 0.3 0.7 $ slow 24 tri1)
+|=| release (scale 0.501 0.9 $ slow 23 tri1)
+|=| egrelease (scale 0.501 0.9 $ slow 23 tri)
+
+|=| cutoff "0.35"
+
+-- kit 22
+r1 $ stack [
+  whenmod 16 10 (const $ midinote "~") $ kickpat,
+  whenmod 20 10 (const $ midinote "~") $ tompat,
+  whenmod 18 13 (const $ midinote "~") $ snarepat,
+  every 8 (const $ fill) $ whenmod 16 8 (const $ midinote "~") $ hatpat ]
+
+r1 $ every 8 (const $ fill) $ midinote "~"
+
+-- full no gtfo
+r1 $ stack [ kickpat, snarepat, tompat, hatpat ]
+
+every 8 (const $ fill) $ slowcat [nope, nope, nope, nope, nope, nope, nope, nope, hatpat, hatpat, hatpat, hatpat, hatpat, hatpat, hatpat, hatpat] ]
+
+r1 silence
+erebus silence
+m silence
+keys silence
+
+keys $ whenmod 18 13 (iter 8) $ whenmod 12 7 (slow (2)) $
+rarely (gtfo) $ shift $ (|+| note (choose [0,-12,12])) $ (|+| note "6") $
+preplace(1,1) (note "{0 0 0 0 ~ 0 0 ~ 0 ~}%16") (note "0 7 -1 3 -12 11 -5")
+|=| kcutoff (scale 0.1 0.5 $ slow 5.33 tri1)
+|=| vcfegint (scale 0.7 0.9 $ slow 6.666 tri1)
+|=| kdecay (scale 0.001 0.7 $ slow 6 tri1)
+|=| detune (scale 0.01 0.3 $ slow 7 tri1)
+|=| dur (scale 0.08 0.3 $ slow 7.33 tri1)
+
+
+-- hrm....
+r1 $ whenmod 15 11 (sometimesBy 0.05 (stut' 4 (0.0625/2) (|*| velocity "0.8"))) $
+whenmod 30 25 (foldEvery [2,3,4] (density 2)) $ whenmod 22 16 (slow 2) $ whenmod 20 10 (slow (4/3) . whenmod 12 7 (slow (4/3))) $
+every 2 (0.0625 ~>) $ foldEvery [2,3,4] (|+| note "{0 1 2 1 2}%16") $ stack [midinote "0*8", (0.0625 <~) $ midinote "2*8"] |=| pan "0.501"
+
+m $ note "-6" |=| dur "1"
+
+r1 silence
+m silence
+erebus silence
+
+erebus $ note "0"

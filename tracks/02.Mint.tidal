@@ -1,0 +1,83 @@
+bps (170/120)
+
+let pmod1 p = stut' 1 0.0625 (|+| note (choose [36,24,12,36,-12])) $ p
+    pmod1' p = sometimesBy 0.1 (sometimesBy 0.1 (pmod1) . shift' 1 . sometimesBy 0.1 (pmod1) . shift' 1 . pmod1) $ p
+    smod p = (|=| release (scale 0.2 0.6 $ slow 17 tri1)) $
+              (|=| xmod (scale 0 0.5 $ slow 20 tri1)) $
+              (|=| cutoff (scale 0.6 0.8 $ slow 11 tri1)) $
+              (|=| egint (scale 0.6 0.8 $ slow 13 tri1)) $
+              (|=| oct2 (scale 0.3 1 $ slow 25.5 tri1)) $
+              (|=| oct1 (scale 0 1 $ slow 21 tri1)) $
+              (|=| noise (scale 0 0.7 $ shift' 2 $ rand)) $ p
+    reset p = (|=| xmod "0.0001") $
+              (|=| egint "0.8") $
+              (|=| oct2 "1") $
+              (|=| oct1 "0.6") $
+              (|=| noise "0") $ p
+    tmod p = whenmod 20 14 (foldEvery [3,4] (0.25 <~)) $ p
+    snaremod p = sometimesBy 0.2 (stut' 1 (0.0625*3) (|+| note "0")) $ shift' 1 $ sometimesBy 0.2 (0.0625 ~>) $ shift' 1 $ p
+
+erebus $ every 3 (rev) $ density 2 $ every 2 (|+| note "12") $ (|+| note "-8") $ note "0 4 7 11 12 16 19 23"
+erebus silence
+
+-- 124
+m $ density 2 $ note "-8(3,8)" # release "0.2" # cutoff "0.8"
+m $ smod $ density 2 $ note "-8(3,8)"
+m $ pmod1' $ smod $ tmod $ density 2 $ note "-8(3,8)"
+
+m silence
+r1 silence
+erebus silence
+
+-- kit 21
+r1 $
+stack [
+rep 10 $ midinote "{0/4 ~ ~ ~ ~}%4",
+rarely (0.125 ~>) $ shift $ midinote "{~ ~ ~ 3 ~ ~ ~}%2",
+rarely (0.25 ~>) $ midinote "~ 1",
+midinote "{8*4 8*2 [9 ~ ~ 9] 8 ~ ~ ~}%4",
+midinote "{10/8 ~ ~ ~ ~}%4",
+midinote "~ [~ 11/4] ~ ~" ]
+
+r1 $
+stack [
+tmod $ rep 10 $ midinote "{0/4 ~ ~ ~ ~}%4",
+rarely (0.125 ~>) $ shift $ midinote "{~ ~ ~ 3 ~ ~ ~}%2",
+tmod $ rarely (0.25 ~>) $ midinote "~ 1",
+tmod $ midinote "{8*4 8*2 [9 ~ ~ 9] 8 ~ ~ ~}%4",
+midinote "{10/8 ~ ~ ~ ~}%4",
+tmod $ midinote "~ [~ 11/4] ~ ~" ]
+
+
+r1 silence
+m silence
+erebus silence
+
+erebus $ note "0" |=| dur "1"
+
+
+r1 $ slow 3 $ midinote "3"
+
+
+keys $  every 3 (rev) $ foldEvery [4,5] (|+| note "-12 -24") $ density 2 $ every 2 (|+| note "12") $ (|+| note "-8") $ note "0 4 7 11 12 16 19 23"
+|=| dur "0.07"
+
+
+keys silence
+
+
+
+
+
+-- for uk
+let smod p = (|=| release (scale 0.2 0.6 $ slow 8.41 tri1)) $
+          (|=| xmod (scale 0 0.5 $ slow 7.64 tri1)) $
+          (|=| cutoff (scale 0.6 0.8 $ slow 7.11 tri1)) $
+          (|=| egint (scale 0.6 0.8 $ slow 6.48 tri1)) $
+          (|=| oct2 (scale 0.3 1 $ slow 5.24 tri1)) $
+          (|=| oct1 (scale 0 1 $ slow 4.15 tri1)) $
+          (|=| noise (scale 0 0.7 $ shift' 3.33 $ rand)) $ p
+
+m $ smod $ slow 2 $ density 2 $ note "-8"
+
+m silence
