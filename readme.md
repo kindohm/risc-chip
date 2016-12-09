@@ -83,6 +83,6 @@ are on _RISC Chip_ and _Bit Dust_ which used extracted samples from
 patterned synth recordings.
 
 [1] Two tracks contain content not sourced from the above hardware: 
-1) _RISC Chip_ and 2) _Viewport_ (which is a remix of the track 
+1) _RISC Chip_ (vocal samples) and 2) _Viewport_ (which is a remix of the track 
 _Ring Surfing_ from the 
 [Expedition](https://kindohm.bandcamp.com/album/expedition) album).
