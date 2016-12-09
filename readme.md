@@ -52,8 +52,8 @@ TidalCycles first.
 
 Audio samples are in the [samples](tree/master/samples) folder. They are structured in a way
 that is compatible with the TidalCycles environment. **Note**: samples were used only for the
-tracks [RISC Chip](blob/master/tracks/01.32-bit-Falcon.tidal) and 
-[Bit Dust](blob/master/tracks/01.32-bit-Falcon.tidal).
+tracks [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal) and 
+[Bit Dust](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal).
 
 <a name="notes"></a>
 ## Nerdy Production Notes
