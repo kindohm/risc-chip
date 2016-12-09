@@ -23,6 +23,11 @@ _RISC Chip_ was composed, produced, and performed using the [TidalCycles](http:/
 live-coding pattern environment. If you wish to use this source code, you must install
 TidalCycles first.  
 
+> TidalCycles (or Tidal for short) is a language for live coding pattern. It allows you to make 
+> musical patterns with text, describing sequences and ways of transforming and combining them, 
+> exploring complex interactions between simple parts.
+
+
 <a name="tracks"></a>
 ## Tracks and Source Code
 
