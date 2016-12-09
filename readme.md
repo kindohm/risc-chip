@@ -36,7 +36,7 @@ TidalCycles first.
 
 5. [Bit Dust](https://github.com/kindohm/risc-chip/blob/master/tracks/05.Bit-Dust.tidal)
 
-6. Viewport
+6. [Viewport](https://github.com/kindohm/risc-chip/blob/master/tracks/06.Viewport.tidal)
 
 7. [Practical Closures](https://github.com/kindohm/risc-chip/blob/master/tracks/07.Practical-Closures.tidal)
 
@@ -52,9 +52,11 @@ TidalCycles first.
 
 Audio samples are in the [samples](tree/master/samples) folder. They are structured in a way
 that is compatible with the TidalCycles environment. **Note**: samples were used only for the
-tracks [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/04.RISC-Chip.tidal) and 
-[Bit Dust](https://github.com/kindohm/risc-chip/blob/master/tracks/05.Bit-Dust.tidal)
+tracks [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/04.RISC-Chip.tidal), 
+[Bit Dust](https://github.com/kindohm/risc-chip/blob/master/tracks/05.Bit-Dust.tidal), and
+[Viewport](https://github.com/kindohm/risc-chip/blob/master/tracks/06.Viewport.tidal)
 (all other tracks used live synthesizers with MIDI).
+
 
 <a name="notes"></a>
 ## Nerdy Production Notes

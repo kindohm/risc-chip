@@ -1,0 +1,12 @@
+-- there is so much improvation in this track that there isn't much 
+-- point in showing the code, but it's basically something like this:
+
+c1 $ foldEvery [2,3] (|+| begin "0.1") $ 
+sound "ringsurfing([3 5 7]/3,8)" |=| cut "1"
+|=| begin "{0.2 0.2 0.3}%4"
+
+-- and continuously changing the values of "begin", and making
+-- other Tidal tweaks.
+
+-- also, the sample for this track is not included in the GitHub
+-- repository. It is a 4-minute wav file that is too big.
