@@ -26,25 +26,25 @@ TidalCycles first.
 <a name="tracks"></a>
 ## Tracks and Source Code
 
-1.[32-bit Falcon](blob/master/tracks/01.32-bit-Falcon.tidal)
+1. [32-bit Falcon](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
 
-2.[Mint](blob/master/tracks/02.Mint.tidal)
+2. [Mint](https://github.com/kindohm/risc-chip/blob/master/tracks/02.Mint.tidal)
 
-3.[Lake Effect](blob/master/tracks/01.32-bit-Falcon.tidal)
+3. [Lake Effect](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
 
-4.[RISC Chip](blob/master/tracks/01.32-bit-Falcon.tidal)
+4. [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
 
-5.[Bit Dust](blob/master/tracks/01.32-bit-Falcon.tidal)
+5. [Bit Dust](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
 
-6.[Viewport](blob/master/tracks/01.32-bit-Falcon.tidal)
+6. [Viewport](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
 
-7.[Practical Closures](blob/master/tracks/01.32-bit-Falcon.tidal)
+7. [Practical Closures](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
 
-8.[.lean()](blob/master/tracks/01.32-bit-Falcon.tidal)
+8. [.lean()](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal)
 
-9.[Enger Tower](blob/master/tracks/01.32-bit-Falcon.tidal) (bonus track)
+9. [Enger Tower](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal) (bonus track)
 
-10.[Wrist Singularity](blob/master/tracks/01.32-bit-Falcon.tidal) (bonus track)
+10. [Wrist Singularity](https://github.com/kindohm/risc-chip/blob/master/tracks/01.32-bit-Falcon.tidal) (bonus track)
 
 
 <a name="samples"></a>
