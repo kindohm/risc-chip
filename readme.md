@@ -72,7 +72,7 @@ Writing and production of _RISC Chip_ began on June 10, 2016 with the
 creation of [Pattern 454](https://github.com/kindohm/365tidalpatterns/blob/master/patterns-401-500/pattern454.tidal) 
 from the _365 Tidal Patterns_ project. Production lasted until August 30, 2016.
 
-All sounds on were sourced from the following analog hardware[1]: 
+All sounds were sourced from the following analog hardware[1]: 
 
 * Elektron Analog RYTM
 * Dreadbox Erebus
