@@ -14,6 +14,7 @@ It is available in both digital and 12" Vinyl formats at
 * [Production With TidalCycles](#tidalcycles)
 * [Tracks and Source Code](#tracks)
 * [Audio Samples](#samples)
+* [Visuals](#visuals)
 * [Nerdy Production Notes](#notes)
 
 <a name="tidalcycles"></a>
@@ -61,6 +62,14 @@ tracks [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/04.RI
 [Bit Dust](https://github.com/kindohm/risc-chip/blob/master/tracks/05.Bit-Dust.tidal), and
 [Viewport](https://github.com/kindohm/risc-chip/blob/master/tracks/06.Viewport.tidal)
 (all other tracks used live synthesizers with MIDI).
+
+
+<a name="visuals"></a>
+## Visuals
+
+Visuals for one track were created [Shawn Lawson](https://github.com/shawnlawson) (Obi-Wan Codenobi) for the album release date. [The Force](https://github.com/shawnlawson/The_Force) was used live-code the visuals.
+
+[_Mint_](https://vimeo.com/192920872) with [fragment shader](shaders/mint.frag) and [cues](shaders/mint_cues.md)
 
 
 <a name="notes"></a>
