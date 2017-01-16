@@ -67,9 +67,9 @@ tracks [RISC Chip](https://github.com/kindohm/risc-chip/blob/master/tracks/04.RI
 <a name="visuals"></a>
 ## Visuals
 
-Visuals for _Mint_ were created by [Shawn Lawson](https://github.com/shawnlawson) (Obi-Wan Codenobi) for the album release date. [The Force](https://github.com/shawnlawson/The_Force) was used live-code the visuals.
+Visuals for one track were created by [Shawn Lawson](https://github.com/shawnlawson) (Obi-Wan Codenobi) for the album release date. [The Force](https://github.com/shawnlawson/The_Force) was used live-code the visuals.
 
-[_Mint_](https://vimeo.com/192920872) with [fragment shader](shaders/mint.frag) and [cues](shaders/mint_cues.md)
+* [_Mint_](https://vimeo.com/192920872) with [fragment shader](shaders/mint.frag) and [cues](shaders/mint_cues.md)
 
 
 <a name="notes"></a>
