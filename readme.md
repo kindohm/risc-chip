@@ -20,6 +20,9 @@ It is available in both digital and 12" Vinyl formats at
 <a name="tidalcycles"></a>
 ## Production With TidalCycles
 
+> NOTE: this music was produced with 2016-era TidalCycles version 0.8. It isn't really feasible to 
+> run this code on your computer any more, but hopefully you can still glean some interesting info from it.
+
 _RISC Chip_ was composed, produced, and performed using the [TidalCycles](http://tidalcycles.org)
 live-coding pattern environment. If you wish to use this source code, you must install
 TidalCycles first.  
